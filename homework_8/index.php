@@ -1,4 +1,5 @@
 <?php
 require 'vendor/autoload.php';
 use Core\Router;
-$obj = new Router();
+$a = new Router();
+echo $a->run(100);

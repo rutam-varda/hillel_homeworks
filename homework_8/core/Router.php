@@ -8,6 +8,3 @@ class Router
         var_export($this->a);
     }
 }
-
-$obj = new Router();
-echo $obj->run(100);
