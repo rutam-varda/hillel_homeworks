@@ -18,7 +18,6 @@ class Router
         echo '<pre>';
         var_dump($serverRequest);
         echo '</pre>';
-        echo "<br>";
 
         $removeFirstElement = substr($serverRequest, 1);
         //var_dump($removeFirstElement);
@@ -29,18 +28,17 @@ class Router
         echo "<br>";
 
         if (empty($newArr[0])) {
-            $classNameAdmin = 'Admin';
-            $classNameHome = 'Home';
+            $className = 'Error';
         } else {
-            $classNameAdmin = $newArr[0];
-            $classNameHome = $newArr[0];
+            $className = $newArr[3];
         }
-        $classPath = 'App\Controllers\\' . $classNameAdmin . $classNameHome;
+        $classPath = 'App\Controllers\\' . $className;
+        //var_dump($className);
 
         if (class_exists($classPath)) {
             $obj = new $classPath();
         } else {
-            $obj = new \App\Controllers\Error;
+            $obj = new \App\Controllers\Error();
         }
         $obj->index();
     }
