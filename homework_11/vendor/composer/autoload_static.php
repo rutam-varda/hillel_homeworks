@@ -33,8 +33,12 @@ class ComposerStaticInit1b8e571a0b0014272f974a7c4e4f5c3a
         'App\\Controllers\\ControllerInterface' => __DIR__ . '/../..' . '/app/Controllers/ControllerInterface.php',
         'App\\Controllers\\Error' => __DIR__ . '/../..' . '/app/Controllers/Error.php',
         'App\\Controllers\\Home' => __DIR__ . '/../..' . '/app/Controllers/Home.php',
+        'App\\Models\\Contacts' => __DIR__ . '/../..' . '/app/Models/Contacts.php',
+        'App\\Models\\Pages' => __DIR__ . '/../..' . '/app/Models/Pages.php',
+        'App\\Models\\Users' => __DIR__ . '/../..' . '/app/Models/Users.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
+        'Core\\View' => __DIR__ . '/../..' . '/core/View.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
